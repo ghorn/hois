@@ -38,17 +38,17 @@ library
 ----                     OISForceFeedback.h,
 --                     OISPrereqs.h
 --
-  Install-includes:  OISEvents.h
-                     OISFactoryCreator.h
-                     OISInputManager.h
-                     OISInterface.h
-                     OISJoyStick.h
---                     OISKeyboard.h
-                     OISMouse.h
-                     OISMultiTouch.h
-                     OISObject.h
---                     OISForceFeedback.h,
-                     OISPrereqs.h
+--  Install-includes:  OISEvents.h
+--                     OISFactoryCreator.h
+--                     OISInputManager.h
+--                     OISInterface.h
+--                     OISJoyStick.h
+----                     OISKeyboard.h
+--                     OISMouse.h
+--                     OISMultiTouch.h
+--                     OISObject.h
+----                     OISForceFeedback.h,
+--                     OISPrereqs.h
 
   exposed-modules:     OIS.OIS,
                        OIS.OISMultiTouch,
