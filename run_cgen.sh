@@ -1,7 +1,7 @@
 #rm OIS/*
 #rm output/*
 
-cgen -o output/ --include /usr/include/OIS \
+cgen -o cbits/ --include /usr/include/OIS \
     OISPrereqs.h \
     OISObject.h \
     OISMouse.h \
@@ -17,4 +17,4 @@ cgen -o output/ --include /usr/include/OIS \
 #    OISEffect.h # cgen fails
 #    OISConfig.h \ # not intended for api use
 
-cgen-hs -o OIS/ output/*.h -u OIS.hs --hierarchy OIS.
+cgen-hs -o OIS/ cbits/*.h -u OIS.hs --hierarchy OIS.
