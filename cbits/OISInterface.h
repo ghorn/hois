@@ -1,6 +1,7 @@
 #ifndef CGEN_OISINTERFACE_H
 #define CGEN_OISINTERFACE_H
 
+#include <OIS/OIS.h>
 
 extern "C"
 {

@@ -1,6 +1,7 @@
 #ifndef CGEN_OISMULTITOUCH_H
 #define CGEN_OISMULTITOUCH_H
 
+#include <OIS/OIS.h>
 
 extern "C"
 {

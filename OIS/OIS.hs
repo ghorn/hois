@@ -45,20 +45,6 @@ module OIS.OIS(
   joyStick_getVector3Sensitivity, 
   joyStick_setEventCallback, 
   joyStick_getEventCallback, 
-  keyEvent_with, 
-  keyEvent_new, 
-  keyEvent_delete, 
-  keyListener_delete, 
-  keyListener_keyPressed, 
-  keyListener_keyReleased, 
-  keyboard_delete, 
-  keyboard_isKeyDown, 
-  keyboard_setEventCallback, 
-  keyboard_getEventCallback, 
-  keyboard_setTextTranslation, 
-  keyboard_getTextTranslation, 
-  keyboard_isModifierDown, 
-  keyboard_copyKeyStates, 
   mouseState_with, 
   mouseEvent_with, 
   mouseState_delete, 
@@ -129,7 +115,6 @@ import OIS.OISFactoryCreator
 import OIS.OISInputManager
 import OIS.OISInterface
 import OIS.OISJoyStick
-import OIS.OISKeyboard
 import OIS.OISMouse
 import OIS.OISMultiTouch
 import OIS.OISObject

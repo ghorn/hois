@@ -1,6 +1,7 @@
 #ifndef CGEN_OISPREREQS_H
 #define CGEN_OISPREREQS_H
 
+#include <OIS/OIS.h>
 
 extern "C"
 {

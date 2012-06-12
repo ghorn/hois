@@ -1,6 +1,7 @@
 #ifndef CGEN_OISMOUSE_H
 #define CGEN_OISMOUSE_H
 
+#include <OIS/OIS.h>
 
 extern "C"
 {

@@ -5,11 +5,6 @@ unsigned int OIS_InputManager_getVersionNumber()
     return InputManager::getVersionNumber();
 }
 
-const std::string OIS_InputManager_&getVersionName(InputManager* this_ptr)
-{
-    return this_ptr->&getVersionName();
-}
-
 InputManager* OIS_InputManager_createInputSystem_stdsize_t(std::size_t winHandle)
 {
     return InputManager::createInputSystem(winHandle);

@@ -65,11 +65,6 @@ bool OIS_JoyStickListener_axisMoved(JoyStickListener* this_ptr, const JoyStickEv
     return this_ptr->axisMoved(*arg, axis);
 }
 
-bool OIS_JoyStickListener_sliderMoved(JoyStickListener* this_ptr, const JoyStickEvent &, int index)
-{
-    return this_ptr->sliderMoved(&, index);
-}
-
 bool OIS_JoyStickListener_povMoved(JoyStickListener* this_ptr, const JoyStickEvent* arg, int index)
 {
     return this_ptr->povMoved(*arg, index);

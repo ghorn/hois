@@ -1,6 +1,7 @@
 #ifndef CGEN_OISFACTORYCREATOR_H
 #define CGEN_OISFACTORYCREATOR_H
 
+#include <OIS/OIS.h>
 
 extern "C"
 {

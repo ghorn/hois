@@ -1,6 +1,7 @@
 #ifndef CGEN_OISEVENTS_H
 #define CGEN_OISEVENTS_H
 
+#include <OIS/OIS.h>
 
 extern "C"
 {

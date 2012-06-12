@@ -1,6 +1,7 @@
 #ifndef CGEN_OISINPUTMANAGER_H
 #define CGEN_OISINPUTMANAGER_H
 
+#include <OIS/OIS.h>
 
 extern "C"
 {
@@ -20,7 +21,6 @@ enum AddOnFactories {
 #endif
 
 unsigned int OIS_InputManager_getVersionNumber();
-const std::string OIS_InputManager_&getVersionName(InputManager* this_ptr);
 InputManager* OIS_InputManager_createInputSystem_stdsize_t(std::size_t winHandle);
 InputManager* OIS_InputManager_createInputSystem(ParamList* paramList);
 void OIS_InputManager_destroyInputSystem(InputManager* manager);

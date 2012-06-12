@@ -1,6 +1,7 @@
 #ifndef CGEN_OISJOYSTICK_H
 #define CGEN_OISJOYSTICK_H
 
+#include <OIS/OIS.h>
 
 extern "C"
 {
@@ -25,7 +26,6 @@ void OIS_JoyStickListener_delete(JoyStickListener* this_ptr);
 bool OIS_JoyStickListener_buttonPressed(JoyStickListener* this_ptr, const JoyStickEvent* arg, int button);
 bool OIS_JoyStickListener_buttonReleased(JoyStickListener* this_ptr, const JoyStickEvent* arg, int button);
 bool OIS_JoyStickListener_axisMoved(JoyStickListener* this_ptr, const JoyStickEvent* arg, int axis);
-bool OIS_JoyStickListener_sliderMoved(JoyStickListener* this_ptr, const JoyStickEvent &, int index);
 bool OIS_JoyStickListener_povMoved(JoyStickListener* this_ptr, const JoyStickEvent* arg, int index);
 bool OIS_JoyStickListener_vector3Moved(JoyStickListener* this_ptr, const JoyStickEvent* arg, int index);
 void OIS_JoyStick_delete(JoyStick* this_ptr);
