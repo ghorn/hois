@@ -1,0 +1,29 @@
+name:                hois
+version:             0.1.0.0
+synopsis:            OIS bindings
+-- description:         
+license:             BSD3
+license-file:        LICENSE
+author:              Greg Horn
+maintainer:          gregmainland@gmail.com
+-- copyright:           
+-- category:            
+build-type:          Simple
+cabal-version:       >=1.8
+
+library
+  exposed-modules:     OIS.OIS,
+                       OIS.OISMultiTouch,
+                       OIS.OISFactoryCreator,
+                       OIS.OISKeyboard,
+                       OIS.Types,
+                       OIS.OISInputManager,
+                       OIS.OISObject,
+                       OIS.OISJoyStick,
+                       OIS.OISMouse,
+                       OIS.OISEvents,
+--                       OIS.OISForceFeedback,
+                       OIS.OISPrereqs,
+                       OIS.OISInterface
+  -- other-modules:       
+  build-depends:       base ==4.5.*
