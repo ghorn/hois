@@ -1,3 +1,5 @@
+#!/bin/sh
+
 #rm OIS/*
 #rm cbits/*
 
@@ -11,10 +13,10 @@ cgen -o cbits/ --interface interface/ois.if --include /usr/include/OIS \
     OISFactoryCreator.h \
     OISEvents.h \
     OISInterface.h \
-#    OISKeyboard.h \ # cgen-hs makes faulty file (easy to fix by hand)
+    OISKeyboard.h \
 #    OISForceFeedback.h \ # cgen-hs makes faulty file
 #    OISException.h \ # cgen fails
 #    OISEffect.h # cgen fails
 #    OISConfig.h \ # not intended for api use
 
-cgen-hs -o OIS/ --interface interface/ois.if -u OIS.hs --hierarchy OIS. cbits/*.h 
+cgen-hs -o OIS/ --interface interface/ois.if --hierarchy OIS. cbits/*.h 

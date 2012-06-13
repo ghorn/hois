@@ -17,7 +17,7 @@ library
                      cbits/OISInputManager.cpp
                      cbits/OISInterface.cpp
                      cbits/OISJoyStick.cpp
---                     cbits/OISKeyboard.cpp
+                     cbits/OISKeyboard.cpp
                      cbits/OISMouse.cpp
                      cbits/OISMultiTouch.cpp
                      cbits/OISObject.cpp
@@ -50,10 +50,10 @@ library
 ----                     OISForceFeedback.h,
 --                     OISPrereqs.h
 
-  exposed-modules:     OIS.OIS,
+  exposed-modules:     OIS,
                        OIS.OISMultiTouch,
                        OIS.OISFactoryCreator,
---                       OIS.OISKeyboard,
+                       OIS.OISKeyboard,
                        OIS.Types,
                        OIS.OISInputManager,
                        OIS.OISObject,

@@ -1,6 +1,10 @@
 @exclude
 getVersionName
 sliderMoved
+copyKeyStates
+
+@rename
+std::size_t|size_t
 
 @header
 OIS/OIS.h
