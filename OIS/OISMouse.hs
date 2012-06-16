@@ -14,7 +14,8 @@ mouseListener_mousePressed,
 mouseListener_mouseReleased, 
 mouse_delete, 
 mouse_setEventCallback, 
-mouse_getEventCallback
+mouse_getEventCallback, 
+mouse_getMouseState
 )
 
 where
@@ -91,4 +92,8 @@ mouse_setEventCallback p1 p2 =   c_mouse_setEventCallback p1 p2
 foreign import ccall "OISMouse.h OIS_Mouse_getEventCallback" c_mouse_getEventCallback :: Mouse -> IO MouseListener
 mouse_getEventCallback :: Mouse -> IO MouseListener
 mouse_getEventCallback p1 =   c_mouse_getEventCallback p1
+
+foreign import ccall "OISMouse.h OIS_Mouse_getMouseState" c_mouse_getMouseState :: Mouse -> IO MouseState
+mouse_getMouseState :: Mouse -> IO MouseState
+mouse_getMouseState p1 =   c_mouse_getMouseState p1
 

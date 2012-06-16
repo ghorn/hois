@@ -26,7 +26,7 @@ InputManager* OIS_InputManager_createInputSystem(ParamList* paramList);
 void OIS_InputManager_destroyInputSystem(InputManager* manager);
 int OIS_InputManager_getNumberOfDevices(InputManager* this_ptr, Type iType);
 DeviceList OIS_InputManager_listFreeDevices(InputManager* this_ptr);
-Object* OIS_InputManager_createInputObject(InputManager* this_ptr, Type iType, bool bufferMode, const std::string* vendor);
+Object* OIS_InputManager_createInputObject(InputManager* this_ptr, Type iType, bool bufferMode, const char* vendor);
 void OIS_InputManager_destroyInputObject(InputManager* this_ptr, Object* obj);
 void OIS_InputManager_addFactoryCreator(InputManager* this_ptr, FactoryCreator* factory);
 void OIS_InputManager_removeFactoryCreator(InputManager* this_ptr, FactoryCreator* factory);

@@ -3,7 +3,6 @@ module OIS.OISFactoryCreator(
 factoryCreator_delete, 
 factoryCreator_totalDevices, 
 factoryCreator_freeDevices, 
-factoryCreator_vendorExist, 
 factoryCreator_createObject, 
 factoryCreator_destroyObject
 )
@@ -29,13 +28,10 @@ foreign import ccall "OISFactoryCreator.h OIS_FactoryCreator_freeDevices" c_fact
 factoryCreator_freeDevices :: FactoryCreator -> Type -> IO Int
 factoryCreator_freeDevices p1 p2 =  liftM fromIntegral $  c_factoryCreator_freeDevices p1 (typeToCInt p2)
 
-foreign import ccall "OISFactoryCreator.h OIS_FactoryCreator_vendorExist" c_factoryCreator_vendorExist :: FactoryCreator -> CInt -> Std__string -> IO CBool
-factoryCreator_vendorExist :: FactoryCreator -> Type -> Std__string -> IO Bool
-factoryCreator_vendorExist p1 p2 p3 =  liftM toBool $  c_factoryCreator_vendorExist p1 (typeToCInt p2) p3
-
-foreign import ccall "OISFactoryCreator.h OIS_FactoryCreator_createObject" c_factoryCreator_createObject :: FactoryCreator -> InputManager -> CInt -> CBool -> Std__string -> IO Object
-factoryCreator_createObject :: FactoryCreator -> InputManager -> Type -> Bool -> Std__string -> IO Object
-factoryCreator_createObject p1 p2 p3 p4 p5 =   c_factoryCreator_createObject p1 p2 (typeToCInt p3) (fromBool p4) p5
+foreign import ccall "OISFactoryCreator.h OIS_FactoryCreator_createObject" c_factoryCreator_createObject :: FactoryCreator -> InputManager -> CInt -> CBool -> (Ptr CChar) -> IO Object
+factoryCreator_createObject :: FactoryCreator -> InputManager -> Type -> Bool -> String -> IO Object
+factoryCreator_createObject p1 p2 p3 p4 p5 = withCString p5 $ \cp5 -> 
+    c_factoryCreator_createObject p1 p2 (typeToCInt p3) (fromBool p4) cp5
 
 foreign import ccall "OISFactoryCreator.h OIS_FactoryCreator_destroyObject" c_factoryCreator_destroyObject :: FactoryCreator -> Object -> IO ()
 factoryCreator_destroyObject :: FactoryCreator -> Object -> IO ()
