@@ -34,6 +34,7 @@ void OIS_JoyStick_setVector3Sensitivity(JoyStick* this_ptr, float degrees);
 float OIS_JoyStick_getVector3Sensitivity(const JoyStick* this_ptr);
 void OIS_JoyStick_setEventCallback(JoyStick* this_ptr, JoyStickListener* joyListener);
 const JoyStickListener* OIS_JoyStick_getEventCallback(const JoyStick* this_ptr);
+const JoyStickState* OIS_JoyStick_getJoyStickState(const JoyStick* this_ptr);
 
 }
 

@@ -65,3 +65,8 @@ const MouseListener* OIS_Mouse_getEventCallback(const Mouse* this_ptr)
     return this_ptr->getEventCallback();
 }
 
+const MouseState* OIS_Mouse_getMouseState(const Mouse* this_ptr)
+{
+    return &this_ptr->getMouseState();
+}
+

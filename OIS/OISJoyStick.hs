@@ -24,7 +24,8 @@ joyStick_getNumberOfComponents,
 joyStick_setVector3Sensitivity, 
 joyStick_getVector3Sensitivity, 
 joyStick_setEventCallback, 
-joyStick_getEventCallback
+joyStick_getEventCallback, 
+joyStick_getJoyStickState
 )
 
 where
@@ -147,4 +148,8 @@ joyStick_setEventCallback p1 p2 =   c_joyStick_setEventCallback p1 p2
 foreign import ccall "OISJoyStick.h OIS_JoyStick_getEventCallback" c_joyStick_getEventCallback :: JoyStick -> IO JoyStickListener
 joyStick_getEventCallback :: JoyStick -> IO JoyStickListener
 joyStick_getEventCallback p1 =   c_joyStick_getEventCallback p1
+
+foreign import ccall "OISJoyStick.h OIS_JoyStick_getJoyStickState" c_joyStick_getJoyStickState :: JoyStick -> IO JoyStickState
+joyStick_getJoyStickState :: JoyStick -> IO JoyStickState
+joyStick_getJoyStickState p1 =   c_joyStick_getJoyStickState p1
 

@@ -20,14 +20,9 @@ int OIS_FactoryCreator_freeDevices(FactoryCreator* this_ptr, Type iType)
     return this_ptr->freeDevices(iType);
 }
 
-bool OIS_FactoryCreator_vendorExist(FactoryCreator* this_ptr, Type iType, const std::string* vendor)
+Object* OIS_FactoryCreator_createObject(FactoryCreator* this_ptr, InputManager* creator, Type iType, bool bufferMode, const char* vendor)
 {
-    return this_ptr->vendorExist(iType, *vendor);
-}
-
-Object* OIS_FactoryCreator_createObject(FactoryCreator* this_ptr, InputManager* creator, Type iType, bool bufferMode, const std::string* vendor)
-{
-    return this_ptr->createObject(creator, iType, bufferMode, *vendor);
+    return this_ptr->createObject(creator, iType, bufferMode, vendor);
 }
 
 void OIS_FactoryCreator_destroyObject(FactoryCreator* this_ptr, Object* obj)

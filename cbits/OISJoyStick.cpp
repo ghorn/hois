@@ -105,3 +105,8 @@ const JoyStickListener* OIS_JoyStick_getEventCallback(const JoyStick* this_ptr)
     return this_ptr->getEventCallback();
 }
 
+const JoyStickState* OIS_JoyStick_getJoyStickState(const JoyStick* this_ptr)
+{
+    return &this_ptr->getJoyStickState();
+}
+
