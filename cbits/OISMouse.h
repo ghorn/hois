@@ -38,6 +38,7 @@ bool OIS_MouseListener_mouseReleased(MouseListener* this_ptr, const MouseEvent* 
 void OIS_Mouse_delete(Mouse* this_ptr);
 void OIS_Mouse_setEventCallback(Mouse* this_ptr, MouseListener* mouseListener);
 const MouseListener* OIS_Mouse_getEventCallback(const Mouse* this_ptr);
+const MouseState* OIS_Mouse_getMouseState(const Mouse* this_ptr);
 
 }
 

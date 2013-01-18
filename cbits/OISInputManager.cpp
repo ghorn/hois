@@ -30,9 +30,9 @@ DeviceList OIS_InputManager_listFreeDevices(InputManager* this_ptr)
     return this_ptr->listFreeDevices();
 }
 
-Object* OIS_InputManager_createInputObject(InputManager* this_ptr, Type iType, bool bufferMode, const std::string* vendor)
+Object* OIS_InputManager_createInputObject(InputManager* this_ptr, Type iType, bool bufferMode, const char* vendor)
 {
-    return this_ptr->createInputObject(iType, bufferMode, *vendor);
+    return this_ptr->createInputObject(iType, bufferMode, vendor);
 }
 
 void OIS_InputManager_destroyInputObject(InputManager* this_ptr, Object* obj)

@@ -468,6 +468,53 @@ cintToType 5 = OISMultiTouch
 cintToType n = error $ "cintToType: can not convert integer '" ++ show n ++ "' to Type"
 
 newtype Vector3 = Vector3 (Ptr Vector3) -- nullary data type
-newtype Std__string = Std__string (Ptr Std__string) -- nullary data type
 newtype Void = Void (Ptr Void) -- nullary data type
+
+class CComponent a where
+  toComponent :: a -> Component
+
+instance CComponent Button where
+  toComponent (Button p) = Component (castPtr p)
+
+instance CComponent Axis where
+  toComponent (Axis p) = Component (castPtr p)
+
+instance CComponent Vector3 where
+  toComponent (Vector3 p) = Component (castPtr p)
+
+instance CComponent Pov where
+  toComponent (Pov p) = Component (castPtr p)
+
+instance CComponent Slider where
+  toComponent (Slider p) = Component (castPtr p)
+
+class CEventArg a where
+  toEventArg :: a -> EventArg
+
+instance CEventArg MouseEvent where
+  toEventArg (MouseEvent p) = EventArg (castPtr p)
+
+instance CEventArg JoyStickEvent where
+  toEventArg (JoyStickEvent p) = EventArg (castPtr p)
+
+instance CEventArg MultiTouchEvent where
+  toEventArg (MultiTouchEvent p) = EventArg (castPtr p)
+
+instance CEventArg KeyEvent where
+  toEventArg (KeyEvent p) = EventArg (castPtr p)
+
+class CObject a where
+  toObject :: a -> Object
+
+instance CObject Mouse where
+  toObject (Mouse p) = Object (castPtr p)
+
+instance CObject JoyStick where
+  toObject (JoyStick p) = Object (castPtr p)
+
+instance CObject MultiTouch where
+  toObject (MultiTouch p) = Object (castPtr p)
+
+instance CObject Keyboard where
+  toObject (Keyboard p) = Object (castPtr p)
 

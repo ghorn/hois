@@ -2,9 +2,14 @@
 getVersionName
 sliderMoved
 copyKeyStates
+inputSystemName
+getAsString
+vendor
 
 @rename
 std::size_t|size_t
+# Implicit coercion.
+std::string|char*
 
 @header
 OIS/OIS.h
