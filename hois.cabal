@@ -64,10 +64,10 @@ library
                        OIS.OISPrereqs,
                        OIS.OISInterface
 --  ghc-options: -pgml g++
-  build-depends:       base ==4.5.*
+  build-depends:       base >= 4
 
 
 executable OISConsole
-  build-depends: hois, base == 4.5.*, X11 >= 1.5 && < 1.7
+  build-depends: hois, base >= 4, X11 >= 1.5 && < 1.7
   main-is: examples/OISConsole.hs
   extra-libraries: stdc++
